@@ -1,7 +1,23 @@
+@use "./breakpoints.scss" as breakpoints;
+
 .toggle {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.desktopOnly {
+  @media (max-width: breakpoints.$s) {
+    display: none !important;
+  }
+}
+
+.mobileOnly {
+  display: none !important;
+
+  @media (max-width: breakpoints.$s) {
+    display: inline-flex !important;
+  }
 }
 
 .btn {
@@ -15,6 +31,7 @@
   padding: 4px 6px;
   border-radius: 6px;
   transition: color 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
 
   &:hover {
     color: var(--neutral-on-background-strong);

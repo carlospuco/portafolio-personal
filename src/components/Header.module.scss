@@ -22,6 +22,20 @@
     mask-size: 100% 100%;
 }
 
+.desktopOnly {
+    @media (max-width: breakpoints.$s) {
+        display: none !important;
+    }
+}
+
+.mobileOnly {
+    display: none !important;
+
+    @media (max-width: breakpoints.$s) {
+        display: flex !important;
+    }
+}
+
 @media (max-width: breakpoints.$s) {
     .position {
         top: auto;

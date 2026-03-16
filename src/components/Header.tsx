@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { Button, Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
+import { Button, Fade, Flex, IconButton, Line, Row, ToggleButton } from "@once-ui-system/core";
 
 import { routes, display, person, about, blog, work, gallery } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
@@ -172,14 +172,27 @@ export const Header = () => {
                 </>
               )}
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
-              <Button
-                href="/cv.pdf"
-                download
-                label={t.nav.downloadCV}
-                prefixIcon="document"
-                size="s"
-                variant="primary"
-              />
+              {/* Desktop: botón con texto */}
+              <div className={styles.desktopOnly}>
+                <Button
+                  href="/cv.pdf"
+                  download
+                  label={t.nav.downloadCV}
+                  prefixIcon="document"
+                  size="s"
+                  variant="primary"
+                />
+              </div>
+              {/* Mobile: solo ícono */}
+              <div className={styles.mobileOnly}>
+                <IconButton
+                  href="/cv.pdf"
+                  download
+                  icon="document"
+                  size="m"
+                  variant="primary"
+                />
+              </div>
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
               <LanguageToggle />
               {display.themeSwitcher && (
