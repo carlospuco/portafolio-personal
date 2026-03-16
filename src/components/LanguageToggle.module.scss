@@ -1,0 +1,34 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--neutral-on-background-weak);
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+
+  &:hover {
+    color: var(--neutral-on-background-strong);
+    background: var(--neutral-alpha-weak);
+  }
+}
+
+.active {
+  color: var(--brand-on-background-medium) !important;
+  background: var(--brand-alpha-weak) !important;
+}
+
+.divider {
+  color: var(--neutral-border-medium);
+  font-size: 0.75rem;
+  user-select: none;
+}

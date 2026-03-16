@@ -21,11 +21,11 @@ const routes: RoutesConfig = {
   "/about": true,
   "/work": true,
   "/blog": true,
-  "/gallery": true,
+  "/gallery": false,
 };
 
 const display: DisplayConfig = {
-  location: true,
+  location: false,
   time: true,
   themeSwitcher: true,
 };
@@ -107,14 +107,14 @@ const effects: EffectsConfig = {
     radius: 100,
   },
   gradient: {
-    display: false,
-    opacity: 100,
+    display: true,
+    opacity: 40,
     x: 50,
-    y: 60,
-    width: 100,
-    height: 50,
+    y: 0,
+    width: 80,
+    height: 60,
     tilt: 0,
-    colorStart: "accent-background-strong",
+    colorStart: "brand-background-strong",
     colorEnd: "page-background",
   },
   dots: {

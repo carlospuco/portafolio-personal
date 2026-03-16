@@ -150,6 +150,10 @@ export interface About extends BasePageConfig {
       timeframe: string;
       /** Role or job title */
       role: string;
+      /** Work location (e.g. "Remote", "Quito, Ecuador") */
+      location?: string;
+      /** Company logo image path */
+      logo?: string;
       /** Achievements at the company */
       achievements: React.ReactNode[];
       /** Images related to the experience */

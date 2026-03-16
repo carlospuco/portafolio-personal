@@ -67,3 +67,12 @@
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
   /*
 }*/
+
+/* Subtle grid background */
+body {
+  background-image:
+    linear-gradient(var(--neutral-border-weak) 1px, transparent 1px),
+    linear-gradient(90deg, var(--neutral-border-weak) 1px, transparent 1px);
+  background-size: 40px 40px;
+  position: relative;
+}

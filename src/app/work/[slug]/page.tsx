@@ -20,6 +20,7 @@ import { formatDate } from "@/utils/formatDate";
 import { ScrollToHash, CustomMDX } from "@/components";
 import { Metadata } from "next";
 import { Projects } from "@/components/work/Projects";
+import { BackToProjects, RelatedProjectsHeading } from "./WorkStrings";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const posts = getPosts(["src", "app", "work", "projects"]);
@@ -93,9 +94,7 @@ export default async function Project({
         }}
       />
       <Column maxWidth="s" gap="16" horizontal="center" align="center">
-        <SmartLink href="/work">
-          <Text variant="label-strong-m">Projects</Text>
-        </SmartLink>
+        <BackToProjects />
         <Text variant="body-default-xs" onBackground="neutral-weak" marginBottom="12">
           {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
         </Text>
@@ -126,9 +125,7 @@ export default async function Project({
       </Column>
       <Column fillWidth gap="40" horizontal="center" marginTop="40">
         <Line maxWidth="40" />
-        <Heading as="h2" variant="heading-strong-xl" marginBottom="24">
-          Related projects
-        </Heading>
+        <RelatedProjectsHeading />
         <Projects exclude={[post.slug]} range={[2]} />
       </Column>
       <ScrollToHash />

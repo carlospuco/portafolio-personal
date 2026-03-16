@@ -13,7 +13,8 @@ import {
   RevealFx,
   SpacingToken,
 } from "@once-ui-system/core";
-import { Footer, Header, RouteGuard, Providers } from "@/components";
+import { Footer, Header, RouteGuard, Providers, LoadingScreen } from "@/components";
+import GradientBackground from "@/components/GradientBackground";
 import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
 
 export async function generateMetadata() {
@@ -104,6 +105,7 @@ export default async function RootLayout({
         />
       </head>
       <Providers>
+        <LoadingScreen />
         <Column
           as="body"
           background="page"
@@ -113,6 +115,7 @@ export default async function RootLayout({
           padding="0"
           horizontal="center"
         >
+          <GradientBackground />
           <RevealFx fill position="absolute">
             <Background
               mask={{

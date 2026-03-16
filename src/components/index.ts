@@ -1,4 +1,6 @@
 export { Header } from "@/components/Header";
+export { default as LoadingScreen } from "@/components/LoadingScreen";
+export { default as ScrollReveal } from "@/components/ScrollReveal";
 export { Footer } from "@/components/Footer";
 export { Mailchimp } from "@/components/Mailchimp";
 export { ProjectCard } from "@/components/ProjectCard";

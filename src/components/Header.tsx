@@ -3,10 +3,13 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
+import { Button, Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
 import { routes, display, person, about, blog, work, gallery } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 import styles from "./Header.module.scss";
 
 type TimeDisplayProps = {
@@ -44,6 +47,8 @@ export default TimeDisplay;
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
+  const { lang } = useLanguage();
+  const t = translations[lang];
 
   return (
     <>
@@ -77,15 +82,15 @@ export const Header = () => {
         </Row>
         <Row fillWidth horizontal="center">
           <Row
-            background="page"
             border="neutral-alpha-weak"
             radius="m-4"
             shadow="l"
-            padding="4"
+            padding="8"
             horizontal="center"
             zIndex={1}
+            className={styles.glass}
           >
-            <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
+            <Row gap="8" vertical="center" textVariant="body-default-m" suppressHydrationWarning>
               {routes["/"] && (
                 <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
               )}
@@ -166,6 +171,17 @@ export const Header = () => {
                   </Row>
                 </>
               )}
+              <Line background="neutral-alpha-medium" vert maxHeight="24" />
+              <Button
+                href="/cv.pdf"
+                download
+                label={t.nav.downloadCV}
+                prefixIcon="document"
+                size="s"
+                variant="primary"
+              />
+              <Line background="neutral-alpha-medium" vert maxHeight="24" />
+              <LanguageToggle />
               {display.themeSwitcher && (
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />

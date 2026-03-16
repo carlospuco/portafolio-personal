@@ -2,20 +2,20 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Carlos",
+  lastName: "Puco",
+  name: `Carlos Puco`,
+  role: "Full-Stack Developer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "carlos.puco.mb@gmail.com",
+  location: "America/Guayaquil", // Quito, Ecuador
+  languages: ["Español", "English"],
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>My weekly newsletter about software development and technology</>,
 };
 
 const social: Social = [
@@ -25,25 +25,13 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/carlos-puco",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/carlos-puco",
     essential: true,
   },
   {
@@ -60,24 +48,24 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Full-Stack Developer · Software Engineer</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Featured</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Latest project
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      From user-facing interfaces to server-side architecture, I design and build complete web applications with a focus on scalability, clean code, and real-world performance — across every layer of the stack.
+    </>
   ),
 };
 
@@ -85,7 +73,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, Full-Stack Developer from Quito, Ecuador`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -94,7 +82,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -102,52 +90,66 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Carlos is a Full-Stack Developer based in Quito, Ecuador, with experience building web
+        applications using React, Angular, Java Spring Boot and Python. He has a solid background
+        in REST API design, relational and non-relational databases, and cloud solutions on Google
+        Cloud Platform. He thrives in Agile/Scrum teams and is passionate about clean code and
+        scalable architectures.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Actuaria",
+        timeframe: "Jan 2025 – Present",
+        role: "Software Developer Specialist",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Development and maintenance of web applications with Python (Backend) and React
+            (Frontend), designing RESTful APIs for actuarial and business processes.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Deployed and maintained applications on Google Cloud Platform (GCP) with CI/CD
+            pipelines for automated build, testing and deployment.
+          </>,
+          <>
+            Worked with relational databases (MySQL) and non-relational databases (Firebase/NoSQL),
+            collaborating with multidisciplinary teams.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "ConsulTI",
+        timeframe: "Jun 2023 – Jan 2025",
+        role: "Full-Stack Developer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Built and maintained web applications with Python (Backend) and React (Frontend),
+            implementing RESTful APIs and integrating MySQL and Firebase databases.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Managed deployments on GCP, implemented CI/CD pipelines, and maintained code quality
+            through unit testing and Git version control.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Banco Pichincha",
+        timeframe: "Apr 2022 – Jun 2023",
+        role: "Frontend / Backend Developer",
+        achievements: [
+          <>
+            Developed web components with React and the C3 Design System, applying UX/UI principles
+            and integrating frontend with Java Spring Boot backend services via REST APIs.
+          </>,
+          <>
+            Performed code refactoring, improved performance and quality, and supported deployments
+            in an Agile Scrum environment.
           </>,
         ],
         images: [],
@@ -155,78 +157,72 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Universidad de las Fuerzas Armadas ESPE",
+        description: <>Software Engineering degree, graduated January 2023. Quito, Ecuador.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Certifications",
+        description: (
+          <>
+            React: De cero a experto (Hooks y MERN) – Udemy · React Native – Udemy · Java
+            Foundation – Oracle Academy · CompTIA Cybersecurity – Udemy
+          </>
+        ),
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
+        title: "Frontend",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Building modern, responsive UIs with React and Angular. Proficient in HTML5, CSS3,
+            TypeScript and component-driven development.
+          </>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "React", icon: "react" },
+          { name: "TypeScript", icon: "typescript" },
+          { name: "JavaScript", icon: "javascript" },
+          { name: "Next.js", icon: "nextjs" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Backend & Cloud",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Designing RESTful APIs with Java Spring Boot and Python. Deploying scalable solutions
+            on Google Cloud Platform with Docker and CI/CD pipelines.
+          </>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "Python", icon: "python" },
+          { name: "Spring", icon: "spring" },
+          { name: "Docker", icon: "docker" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Databases",
+        description: (
+          <>
+            Experience with relational databases (MySQL) and non-relational databases (Firebase /
+            NoSQL) for diverse application needs.
+          </>
+        ),
+        tags: [
+          { name: "MySQL", icon: "database" },
+          { name: "Firebase", icon: "firebase" },
         ],
+        images: [],
       },
     ],
   },
@@ -235,8 +231,8 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  title: "Writing about software development and tech...",
+  description: `Articles and thoughts by ${person.name} on web development, cloud and best practices`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
@@ -245,16 +241,16 @@ const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
+  description: `Full-stack web projects by ${person.name}`,
+  // Create new project pages by adding a new .mdx file to app/work/projects
   // All projects will be listed on the /home and /work routes
 };
 
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  title: `Gallery – ${person.name}`,
+  description: `A visual collection by ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
