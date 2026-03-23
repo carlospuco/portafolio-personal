@@ -46,6 +46,12 @@ import {
   SiGooglecloud,
   SiNestjs,
   SiNodedotjs,
+  SiPostgresql,
+  SiRedis,
+  SiAmazonwebservices,
+  SiDotnet,
+  SiGraphql,
+  SiGithubactions,
 } from "react-icons/si";
 
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
@@ -97,6 +103,12 @@ export const iconLibrary: Record<string, IconType> = {
   googlecloud: SiGooglecloud,
   nestjs: SiNestjs,
   nodejs: SiNodedotjs,
+  postgresql: SiPostgresql,
+  redis: SiRedis,
+  aws: SiAmazonwebservices,
+  dotnet: SiDotnet,
+  graphql: SiGraphql,
+  githubactions: SiGithubactions,
   facebook: FaFacebook,
   pinterest: FaPinterest,
   whatsapp: FaWhatsapp,

@@ -44,8 +44,8 @@ function TechBadge({ tech, index = 0 }: TechBadgeProps) {
   return (
     <Flex
       vertical="center"
-      gap="6"
       style={{
+        gap: "6px",
         display: "inline-flex",
         padding: "5px 12px",
         borderRadius: "8px",
