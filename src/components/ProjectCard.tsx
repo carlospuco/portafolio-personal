@@ -11,6 +11,7 @@ import {
 } from "@once-ui-system/core";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
+import { TechStack } from "./TechBadge";
 
 interface ProjectCardProps {
   href: string;
@@ -21,6 +22,7 @@ interface ProjectCardProps {
   description: string;
   avatars: { src: string }[];
   link: string;
+  stack?: string[];
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -31,6 +33,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   avatars,
   link,
+  stack,
 }) => {
   const { lang } = useLanguage();
   const t = translations[lang].work;
@@ -67,6 +70,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 {description}
               </Text>
             )}
+            {stack && stack.length > 0 && <TechStack stack={stack} />}
             <Flex gap="24" wrap>
               {content?.trim() && (
                 <SmartLink
