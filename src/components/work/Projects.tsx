@@ -1,7 +1,7 @@
 import { getPosts } from "@/utils/utils";
 import { Column } from "@once-ui-system/core";
 import { ProjectCard } from "@/components";
-import ScrollReveal from "@/components/ScrollReveal";
+import ScrollReveal from "@/components/scroll/ScrollReveal";
 
 const directions = ["zoom", "left", "right", "left", "right"] as const;
 

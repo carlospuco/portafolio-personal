@@ -7,7 +7,7 @@ import { about, person, social } from "@/resources";
 import TechCarousel from "@/components/about/TechCarousel";
 import ExperienceCard from "@/components/about/ExperienceCard";
 import TableOfContents from "@/components/about/TableOfContents";
-import ScrollReveal from "@/components/ScrollReveal";
+import ScrollReveal from "@/components/scroll/ScrollReveal";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 import styles from "@/components/about/about.module.scss";

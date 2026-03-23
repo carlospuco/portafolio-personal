@@ -1,7 +1,6 @@
 import { Column, Meta, Schema } from "@once-ui-system/core";
-import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
-import { baseURL, blog, person, newsletter } from "@/resources";
+import { baseURL, blog, person } from "@/resources";
 import { BlogPageHeading } from "./[slug]/BlogStrings";
 
 export async function generateMetadata() {
@@ -34,7 +33,6 @@ export default function Blog() {
       <Column fillWidth flex={1} gap="40">
         <Posts range={[1, 1]} thumbnail />
         <Posts range={[2, 3]} columns="2" thumbnail direction="column" />
-        <Mailchimp marginBottom="l" />
       </Column>
     </Column>
   );

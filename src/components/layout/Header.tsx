@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import { Button, Fade, Flex, IconButton, Line, Row, ToggleButton } from "@once-ui-system/core";
 
 import { routes, display, person, about, blog, work, gallery } from "@/resources";
-import { ThemeToggle } from "./ThemeToggle";
-import LanguageToggle from "./LanguageToggle";
+import { ThemeToggle } from "../controls/ThemeToggle";
+import LanguageToggle from "../controls/LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 import styles from "./Header.module.scss";

@@ -14,8 +14,8 @@ import {
   SpacingToken,
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers, LoadingScreen } from "@/components";
-import GradientBackground from "@/components/GradientBackground";
-import ScrollProgressBar from "@/components/ScrollProgressBar";
+import GradientBackground from "@/components/layout/GradientBackground";
+import ScrollProgressBar from "@/components/scroll/ScrollProgressBar";
 import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
 
 export async function generateMetadata() {
@@ -117,7 +117,7 @@ export default async function RootLayout({
           horizontal="center"
         >
           <ScrollProgressBar />
-        <GradientBackground />
+          <GradientBackground />
           <RevealFx fill position="absolute">
             <Background
               mask={{
