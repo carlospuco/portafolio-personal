@@ -8,6 +8,7 @@ import {
   SiNestjs, SiPhp, SiDotnet, SiFigma,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
+import styles from "./TechBadge.module.scss";
 
 const iconMap: Record<string, { icon: React.ElementType; color: string; bg: string }> = {
   Python:       { icon: SiPython,      color: "#3776AB", bg: "rgba(55,118,171,0.12)" },
@@ -44,6 +45,7 @@ function TechBadge({ tech, index = 0 }: TechBadgeProps) {
   return (
     <Flex
       vertical="center"
+      className={styles.badge}
       style={{
         gap: "6px",
         display: "inline-flex",
@@ -51,10 +53,7 @@ function TechBadge({ tech, index = 0 }: TechBadgeProps) {
         borderRadius: "8px",
         background: entry.bg,
         border: `1px solid ${entry.color}35`,
-        backdropFilter: "blur(4px)",
-        opacity: 0,
-        transform: "translateY(10px) scale(0.95)",
-        animation: `badgeIn 0.4s cubic-bezier(0.16,1,0.3,1) ${index * 50}ms forwards`,
+        animationDelay: `${index * 50}ms`,
         cursor: "default",
       }}
     >
@@ -65,11 +64,6 @@ function TechBadge({ tech, index = 0 }: TechBadgeProps) {
       >
         {tech}
       </Text>
-      <style>{`
-        @keyframes badgeIn {
-          to { opacity: 1; transform: translateY(0) scale(1); }
-        }
-      `}</style>
     </Flex>
   );
 }
