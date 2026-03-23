@@ -32,6 +32,12 @@ export interface Translations {
     readCaseStudy: string;
     viewProject: string;
   };
+  blog: {
+    recentPosts: string;
+    sharePost: string;
+    linkCopied: string;
+    copyFailed: string;
+  };
   ui: {
     seeMore: string;
     seeLess: string;
@@ -103,6 +109,12 @@ export const en: Translations = {
     readCaseStudy: "Read case study",
     viewProject: "View project",
   },
+  blog: {
+    recentPosts: "Recent posts",
+    sharePost: "Share this post:",
+    linkCopied: "Link copied to clipboard",
+    copyFailed: "Failed to copy link",
+  },
   ui: {
     seeMore: "See more",
     seeLess: "See less",
@@ -173,6 +185,12 @@ export const es: Translations = {
     backToProjects: "Proyectos",
     readCaseStudy: "Ver caso de estudio",
     viewProject: "Ver proyecto",
+  },
+  blog: {
+    recentPosts: "Publicaciones recientes",
+    sharePost: "Comparte esta publicación:",
+    linkCopied: "Enlace copiado al portapapeles",
+    copyFailed: "Error al copiar el enlace",
   },
   ui: {
     seeMore: "Ver más",

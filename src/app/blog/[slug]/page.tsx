@@ -21,6 +21,7 @@ import { Metadata } from "next";
 import React from "react";
 import { Posts } from "@/components/blog/Posts";
 import { ShareSection } from "@/components/blog/ShareSection";
+import { RecentPostsHeading } from "./BlogStrings";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const posts = getPosts(["src", "app", "blog", "posts"]);
@@ -144,9 +145,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
 
           <Column fillWidth gap="40" horizontal="center" marginTop="40">
             <Line maxWidth="40" />
-            <Text as="h2" id="recent-posts" variant="heading-strong-xl" marginBottom="24">
-              Recent posts
-            </Text>
+            <RecentPostsHeading />
             <Posts exclude={[post.slug]} range={[1, 2]} columns="2" thumbnail direction="column" />
           </Column>
           <ScrollToHash />
