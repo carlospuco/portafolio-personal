@@ -1,18 +1,23 @@
 .reveal {
   opacity: 0;
-  transition: opacity 0.65s ease, transform 0.65s ease;
-  will-change: opacity, transform;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
 }
 
 /* Directions — initial state */
-.up    { transform: translateY(32px); }
-.down  { transform: translateY(-32px); }
-.left  { transform: translateX(40px); }
-.right { transform: translateX(-40px); }
-.fade  { transform: none; }
+.up    { transform: translateY(48px); filter: blur(4px); }
+.down  { transform: translateY(-48px); filter: blur(4px); }
+.left  { transform: translateX(56px); filter: blur(4px); }
+.right { transform: translateX(-56px); filter: blur(4px); }
+.fade  { transform: none; filter: blur(6px); }
+.zoom  { transform: scale(0.9) translateY(24px); filter: blur(6px); }
+.scale { transform: scale(0.85); filter: blur(8px); }
 
 /* Visible state */
 .visible {
   opacity: 1;
-  transform: translate(0, 0) !important;
+  transform: translate(0, 0) scale(1) !important;
+  filter: blur(0px) !important;
 }

@@ -3,6 +3,8 @@ import { Column } from "@once-ui-system/core";
 import { ProjectCard } from "@/components";
 import ScrollReveal from "@/components/ScrollReveal";
 
+const directions = ["zoom", "left", "right", "left", "right"] as const;
+
 interface ProjectsProps {
   range?: [number, number?];
   exclude?: string[];
@@ -27,7 +29,7 @@ export function Projects({ range, exclude }: ProjectsProps) {
   return (
     <Column fillWidth gap="xl" marginBottom="40" paddingX="l">
       {displayedProjects.map((post, index) => (
-        <ScrollReveal key={post.slug} direction="up" delay={index * 80}>
+        <ScrollReveal key={post.slug} direction={directions[index % directions.length]} delay={index * 60}>
           <ProjectCard
             priority={index < 2}
             href={`/work/${post.slug}`}

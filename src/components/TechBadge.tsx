@@ -33,9 +33,10 @@ const iconMap: Record<string, { icon: React.ElementType; color: string; bg: stri
 
 interface TechBadgeProps {
   tech: string;
+  index?: number;
 }
 
-function TechBadge({ tech }: TechBadgeProps) {
+function TechBadge({ tech, index = 0 }: TechBadgeProps) {
   const entry = iconMap[tech];
   if (!entry) return null;
   const Icon = entry.icon;
@@ -46,23 +47,29 @@ function TechBadge({ tech }: TechBadgeProps) {
       gap="6"
       style={{
         display: "inline-flex",
-        padding: "5px 10px",
+        padding: "5px 12px",
         borderRadius: "8px",
         background: entry.bg,
-        border: `1px solid ${entry.color}30`,
+        border: `1px solid ${entry.color}35`,
         backdropFilter: "blur(4px)",
-        transition: "transform 0.15s ease, box-shadow 0.15s ease",
+        opacity: 0,
+        transform: "translateY(10px) scale(0.95)",
+        animation: `badgeIn 0.4s cubic-bezier(0.16,1,0.3,1) ${index * 50}ms forwards`,
         cursor: "default",
       }}
-      className="tech-badge"
     >
       <Icon size={15} color={entry.color} />
       <Text
         variant="label-default-xs"
-        style={{ color: entry.color, fontWeight: 500, letterSpacing: "0.01em" }}
+        style={{ color: entry.color, fontWeight: 600, letterSpacing: "0.02em" }}
       >
         {tech}
       </Text>
+      <style>{`
+        @keyframes badgeIn {
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+      `}</style>
     </Flex>
   );
 }
@@ -75,8 +82,8 @@ export function TechStack({ stack }: TechStackProps) {
   if (!stack || stack.length === 0) return null;
   return (
     <Flex gap="8" wrap style={{ marginTop: "4px" }}>
-      {stack.map((tech) => (
-        <TechBadge key={tech} tech={tech} />
+      {stack.map((tech, i) => (
+        <TechBadge key={tech} tech={tech} index={i} />
       ))}
     </Flex>
   );

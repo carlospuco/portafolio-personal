@@ -3,7 +3,7 @@
 import { useEffect, useRef, ReactNode } from "react";
 import styles from "./ScrollReveal.module.scss";
 
-type Direction = "up" | "down" | "left" | "right" | "fade";
+type Direction = "up" | "down" | "left" | "right" | "fade" | "zoom" | "scale";
 
 interface ScrollRevealProps {
   children: ReactNode;
