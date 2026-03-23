@@ -33,6 +33,7 @@ export interface Translations {
     viewProject: string;
   };
   blog: {
+    title: string;
     recentPosts: string;
     sharePost: string;
     linkCopied: string;
@@ -110,6 +111,7 @@ export const en: Translations = {
     viewProject: "View project",
   },
   blog: {
+    title: "Writing about software development and tech...",
     recentPosts: "Recent posts",
     sharePost: "Share this post:",
     linkCopied: "Link copied to clipboard",
@@ -187,6 +189,7 @@ export const es: Translations = {
     viewProject: "Ver proyecto",
   },
   blog: {
+    title: "Escribiendo sobre desarrollo de software y tecnología...",
     recentPosts: "Publicaciones recientes",
     sharePost: "Comparte esta publicación:",
     linkCopied: "Enlace copiado al portapapeles",

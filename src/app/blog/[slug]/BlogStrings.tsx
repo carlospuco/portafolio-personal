@@ -1,8 +1,17 @@
 "use client";
 
-import { Text } from "@once-ui-system/core";
+import { Heading, Text } from "@once-ui-system/core";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
+
+export function BlogPageHeading() {
+  const { lang } = useLanguage();
+  return (
+    <Heading marginBottom="l" variant="heading-strong-xl" marginLeft="24">
+      {translations[lang].blog.title}
+    </Heading>
+  );
+}
 
 export function RecentPostsHeading() {
   const { lang } = useLanguage();
